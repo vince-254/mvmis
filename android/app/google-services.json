@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "258229842831",
+    "firebase_url": "https://mvmis-6fc9d.firebaseio.com",
+    "project_id": "mvmis-6fc9d",
+    "storage_bucket": "mvmis-6fc9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258229842831:android:9adc6b1e05371ee48291fa",
+        "android_client_info": {
+          "package_name": "com.lesean.mvmis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258229842831-5rq1qi83r6ldj463soibc3cc6s9mgvss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNNCjGMEP8mbXZtixEkmx_lRD1R799ThQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258229842831-5rq1qi83r6ldj463soibc3cc6s9mgvss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

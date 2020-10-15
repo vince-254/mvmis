@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:mvmis/components/home.dart';
+import 'package:mvmis/screens/dashboard.dart';
 import 'package:provider/provider.dart';
 import 'package:mvmis/components/leopard_page.dart';
 import 'package:mvmis/components/styles.dart';
@@ -258,7 +259,10 @@ class AppBar extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
             Spacer(),
-            Icon(Icons.menu),
+            InkWell(child: Icon(Icons.dashboard_outlined), onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Dashboard()));
+            },),
           ],
         ),
       ),

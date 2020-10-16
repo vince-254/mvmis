@@ -62,14 +62,40 @@ class _DashboardState extends State<Dashboard> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        width: 100, height: 100, child: Text("Last service")),
+                        width: 120,
+                        height: 100,
+                        child: Column(
+                          children: [
+                            Text("Last service",
+                                style: TextStyle(fontSize: 20)),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: Text("15/06/2020",
+                                  style: TextStyle(fontSize: 15)),
+                            )
+                          ],
+                        )),
                   ),
                 ),
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        width: 100, height: 100, child: Text("Next service")),
+                        width: 120,
+                        height: 100,
+                        child: Column(
+                          children: [
+                            Text(
+                              "Next service",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: Text("15/06/2020",
+                                  style: TextStyle(fontSize: 15)),
+                            ),
+                          ],
+                        )),
                   ),
                 )
               ],
@@ -89,8 +115,10 @@ class _DashboardState extends State<Dashboard> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child:
-                          Container(width: 100, height: 50, child: Center(child: Text("Admin"))),
+                      child: Container(
+                          width: 100,
+                          height: 50,
+                          child: Center(child: Text("Admin"))),
                     ),
                   ),
                 ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mvmis/config/auth.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
 
 class Admin extends StatefulWidget {
   @override
@@ -10,6 +11,10 @@ class Admin extends StatefulWidget {
 class _AdminState extends State<Admin> {
   String _email;
   String _password;
+  var initializationSettingsAndroid;
+  var initializationSettings;
+
+  void _showNotification() {}
 
   @override
   Widget build(BuildContext context) {

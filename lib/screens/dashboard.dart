@@ -83,7 +83,10 @@ class _DashboardState extends State<Dashboard> {
                     borderRadius: BorderRadius.circular(40.0),
                   ),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Admin()));
+                    },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child:

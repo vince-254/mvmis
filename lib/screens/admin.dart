@@ -46,8 +46,8 @@ class _AdminState extends State<Admin> {
     var platformChannelSpecifics = NotificationDetails(
         android: androidPlatformChannelSpecifics, iOS: iOSChannelSpecifics);
 
-    await flutterLocalNotificationsPlugin.show(0, 'Hello, ',
-        'A new user has been created', platformChannelSpecifics,
+    await flutterLocalNotificationsPlugin.show(
+        0, 'Hello, ', 'A new user has been created', platformChannelSpecifics,
         payload: 'test oayload');
   }
 
@@ -69,8 +69,8 @@ class _AdminState extends State<Admin> {
     if (payload != null) {
       debugPrint('Notification payload: $payload');
     }
-    await Navigator.push(context,
-        new MaterialPageRoute(builder: (context) => new Dashboard()));
+    await Navigator.push(
+        context, new MaterialPageRoute(builder: (context) => new Dashboard()));
   }
 
   Future onDidReceiveLocalNotification(
@@ -210,10 +210,23 @@ class _AdminState extends State<Admin> {
                             // _showNotification();
                             // Navigator.push(context,
                             //     MaterialPageRoute(builder: (context) => MyHomePage()));
+                            if (_email != null && _password != null) {
+                              AuthService()
+                                  .registerWithEmailAndPassword(
+                                  _email, _password)
+                                  .whenComplete(() {
 
-                            AuthService().registerWithEmailAndPassword(
-                              _email, _password
-                            ).whenComplete(() => _showNotification());
+                              });
+                              _showNotification();
+                            }
+
+                                // whenComplete(() => _showNotification())
+                                ;
+
+                            // dbRef.get().then((data) {
+                            //   data.exists ? _goToHomeScreen(user) :
+                            //   _createUser();
+                            // });
 
                             // FirebaseAuth.instance
                             //         .createUserWithEmailAndPassword(

@@ -214,10 +214,12 @@ class _AdminState extends State<Admin> {
                               AuthService()
                                   .registerWithEmailAndPassword(
                                   _email, _password)
-                                  .whenComplete(() {
-
+                                  .then((e) {
+                                if (e != null) {
+                                  _showNotification();
+                                }
                               });
-                              _showNotification();
+
                             }
 
                                 // whenComplete(() => _showNotification())
